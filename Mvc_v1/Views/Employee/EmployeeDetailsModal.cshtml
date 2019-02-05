@@ -1,0 +1,23 @@
+﻿@model Domain.Employee
+
+<div>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel">EmplpoyeeInfo</h4>
+    </div>
+
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        
+
+    </dl>
+</div>

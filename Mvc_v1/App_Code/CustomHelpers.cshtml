@@ -1,0 +1,13 @@
+﻿
+
+@helper DisplayDate(DateTime date)
+{
+    <span class="date">@($"{date.ToString(" dd/MM/yyyy")}")</span>
+
+}
+
+@helper DisplayName(string firstName, string lastName)
+{
+    <span class="date">@($"{lastName} {firstName[0]}.")</span>
+
+}

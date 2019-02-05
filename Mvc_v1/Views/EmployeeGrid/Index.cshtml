@@ -1,0 +1,18 @@
+﻿@using Mvc_v1.Helpers
+@model IEnumerable<Domain.Dto.EmployeeDto>
+@*@model IEnumerable<Domain.Employee>*@
+
+@{
+    var table = Html.GetGrid("EmployeeList")
+        .WithColumn(x => x.FirstName)
+        .WithColumn(x => x.LastName)
+        .WithColumn(x => x.DepartmentName)
+        .WithColumn(x => x.Email)
+        .WithColumn(x => x.DateOfEmployment)
+        .Build();
+}
+
+<div>
+    @table
+</div>
+

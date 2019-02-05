@@ -1,0 +1,82 @@
+﻿@model Domain.Dto.EmployeeDto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfEmployment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfEmployment.ToString("dd/MM/yyyy"))
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Shift.ShiftName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shift.ShiftName)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonalDataId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonalDataId)
+        </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EventId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EventId)
+            </dd>*@
+    
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
