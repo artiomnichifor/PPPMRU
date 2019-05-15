@@ -17,17 +17,38 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("HRApp", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Employees", "Index", "Employee")</li>
-                    <li>@Html.ActionLink("EmployeesGrid", "Index", "EmployeeGrid")</li>
-                    <li>@Html.ActionLink("Departments", "Index", "Department")</li>
-                    <li>@Html.ActionLink("Events", "Index", "Event")</li>
-                    <li>@Html.ActionLink("PersonalDatas", "Index", "PersonalData")</li>
-                    <li>@Html.ActionLink("Shifts", "Index", "Shift")</li>
-                    <li>@Html.ActionLink("Salaries", "Index", "Salary")</li>
+                    @if (!User.Identity.IsAuthenticated)
+                    { 
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Careers", "Contact", "Home")</li>
+
+                    }
+                    @if (User.IsInRole("user"))
+                    { 
+                        <li>@Html.ActionLink("My Profile", "Index", "Employee")</li>
+                        <li>@Html.ActionLink("My Department", "Index", "Employee")</li>
+                        <li>@Html.ActionLink("Other Employees", "Index", "Employee")</li>
+                        <li>@Html.ActionLink("Events", "Index", "EmployeeGrid")</li>
+                        <li>@Html.ActionLink("Reports", "Index", "EmployeeGrid")</li>
+                    }
+                    @if (User.IsInRole("admin"))
+                    { 
+                        <li>@Html.ActionLink("Employees", "Index", "Employee")</li>
+                        <li>@Html.ActionLink("EmployeesGrid", "Index", "EmployeeGrid")</li>
+                        <li>@Html.ActionLink("Departments", "Index", "Department")</li>
+                        <li>@Html.ActionLink("Events", "Index", "Event")</li>
+                        <li>@Html.ActionLink("PersonalDatas", "Index", "PersonalData")</li>
+                        <li>@Html.ActionLink("Shifts", "Index", "Shift")</li>
+                        <li>@Html.ActionLink("Salaries", "Index", "Salary")</li>
+                        <li>@Html.ActionLink("Reports", "Index", "EmployeeGrid")</li>
+
+                    }
+                    
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
