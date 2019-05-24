@@ -9,51 +9,122 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("HRApp", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    @if (!User.Identity.IsAuthenticated)
-                    { 
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
-                        <li>@Html.ActionLink("Careers", "Contact", "Home")</li>
-
-                    }
-                    @if (User.IsInRole("user"))
-                    { 
-                        <li>@Html.ActionLink("My Profile", "Index", "Employee")</li>
-                        <li>@Html.ActionLink("My Department", "Index", "Employee")</li>
-                        <li>@Html.ActionLink("Other Employees", "Index", "Employee")</li>
-                        <li>@Html.ActionLink("Events", "Index", "EmployeeGrid")</li>
-                        <li>@Html.ActionLink("Reports", "Index", "EmployeeGrid")</li>
-                    }
-                    @if (User.IsInRole("admin"))
-                    { 
-                        <li>@Html.ActionLink("Employees", "Index", "Employee")</li>
-                        <li>@Html.ActionLink("EmployeesGrid", "Index", "EmployeeGrid")</li>
-                        <li>@Html.ActionLink("Departments", "Index", "Department")</li>
-                        <li>@Html.ActionLink("Events", "Index", "Event")</li>
-                        <li>@Html.ActionLink("PersonalDatas", "Index", "PersonalData")</li>
-                        <li>@Html.ActionLink("Shifts", "Index", "Shift")</li>
-                        <li>@Html.ActionLink("Salaries", "Index", "Salary")</li>
-                        <li>@Html.ActionLink("Reports", "Index", "EmployeeGrid")</li>
-
-                    }
+                <div class="navbar-header">
                     
-                </ul>
-                @Html.Partial("_LoginPartial")
+                    @Html.ActionLink("HRApp", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbarResponsive" style>
+                    <ul class="nav navbar-nav">
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">@Html.ActionLink("About", "About", "Home", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "Home", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Careers", "Contact", "Home", new object { }, new { @class = "nav-link" })</li>
+
+                        }
+                        @if (User.IsInRole("user"))
+                        {
+                            <li>@Html.ActionLink("My Profile", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("My Department", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Other Employees", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Events", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Reports", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
+                        }
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li>@Html.ActionLink("Employees", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("EmployeesGrid", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Departments", "Index", "Department", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Events", "Index", "Event", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("PersonalDatas", "Index", "PersonalData", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Shifts", "Index", "Shift", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Salaries", "Index", "Salary", new object { }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Reports", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
+
+                        }
+
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
             </div>
-        </div>
-    </div>
+        @*<a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>*@
+    </nav>
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("HRApp", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Careers", "Contact", "Home")</li>
+
+                        }
+                        @if (User.IsInRole("user"))
+                        {
+                            <li>@Html.ActionLink("My Profile", "Index", "Employee")</li>
+                            <li>@Html.ActionLink("My Department", "Index", "Employee")</li>
+                            <li>@Html.ActionLink("Other Employees", "Index", "Employee")</li>
+                            <li>@Html.ActionLink("Events", "Index", "EmployeeGrid")</li>
+                            <li>@Html.ActionLink("Reports", "Index", "EmployeeGrid")</li>
+                        }
+                        @if (User.IsInRole("admin"))
+                        {
+                            <li>@Html.ActionLink("Employees", "Index", "Employee")</li>
+                            <li>@Html.ActionLink("EmployeesGrid", "Index", "EmployeeGrid")</li>
+                            <li>@Html.ActionLink("Departments", "Index", "Department")</li>
+                            <li>@Html.ActionLink("Events", "Index", "Event")</li>
+                            <li>@Html.ActionLink("PersonalDatas", "Index", "PersonalData")</li>
+                            <li>@Html.ActionLink("Shifts", "Index", "Shift")</li>
+                            <li>@Html.ActionLink("Salaries", "Index", "Salary")</li>
+                            <li>@Html.ActionLink("Reports", "Index", "EmployeeGrid")</li>
+
+                        }
+
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>*@
+
     <div class="container body-content">
         @RenderBody()
         <hr />
