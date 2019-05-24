@@ -9,49 +9,52 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container">
-                <div class="navbar-header">
-                    
-                    @Html.ActionLink("HRApp", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse" id="navbarResponsive" style>
-                    <ul class="nav navbar-nav">
-                        @if (!User.Identity.IsAuthenticated)
-                        {
-                            <li class="nav-item">@Html.ActionLink("About", "About", "Home", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("Contact Us", "Contact", "Home", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("Careers", "Contact", "Home", new object { }, new { @class = "nav-link" })</li>
-
-                        }
-                        @if (User.IsInRole("user"))
-                        {
-                            <li class="nav-item">@Html.ActionLink("My Profile", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("My Department", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("Other Employees", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("Events", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("Reports", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
-                        }
-                        @if (User.IsInRole("admin"))
-                        {
-                            <li class="nav-item">@Html.ActionLink("Employees", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("EmployeesGrid", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("Departments", "Index", "Department", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("Events", "Index", "Event", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("PersonalDatas", "Index", "PersonalData", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("Shifts", "Index", "Shift", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("Salaries", "Index", "Salary", new object { }, new { @class = "nav-link" })</li>
-                            <li class="nav-item">@Html.ActionLink("Reports", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
-
-                        }
-
-                    </ul>
-                    @Html.Partial("_LoginPartial")
-                </div>
+            <div class="navbar-header">
+                <a href="@Url.Action("Index", "Home")" class="navbar-brand">
+                    <img src="~/img/logo_header_gray.png" title="title" alt="additional title" width="88" height="27" />
+                </a>
+                @*@Html.ActionLink("HRApp", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
+            <div class="navbar-collapse collapse" id="navbarResponsive" style>
+                <ul class="nav navbar-nav">
+                    @if (!User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">@Html.ActionLink("About", "About", "Home", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Contact Us", "Contact", "Home", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Careers", "Contact", "Home", new object { }, new { @class = "nav-link" })</li>
+
+            }
+                    @if (User.IsInRole("user"))
+                {
+                    <li class="nav-item">@Html.ActionLink("My Profile", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("My Department", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Other Employees", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Events", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Reports", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
+            }
+                    @if (User.IsInRole("admin"))
+                {
+                    <li class="nav-item">@Html.ActionLink("Employees", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("EmployeesGrid", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Departments", "Index", "Department", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Events", "Index", "Event", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("PersonalDatas", "Index", "PersonalData", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Shifts", "Index", "Shift", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Salaries", "Index", "Salary", new object { }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Reports", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
+
+            }
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
         @*<a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
