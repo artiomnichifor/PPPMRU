@@ -4,18 +4,15 @@
     ViewBag.Title = "Index";
 }
 
-
-
-
-<div class="bs-docs-section">
+<div class="bs-docs-section" style="margin-top: 3em">
     <div class="page-header">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12" style="padding-left: 0px">
                 <h1 id="employees">Employees</h1>
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="margin-top: 2em">
         @if (User.IsInRole("admin"))
         {
 
@@ -72,9 +69,14 @@
                 </td>
 
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    
+
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-outline-warning" })
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-outline-success" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-outline-danger" })
+                    </div>
+
                 </td>
             </tr>
             }
