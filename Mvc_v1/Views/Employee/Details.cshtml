@@ -4,7 +4,138 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<body class="w3-light-grey">
+
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+        <!-- The Grid -->
+        <div class="w3-row-padding">
+            <!-- Left Column -->
+            <div class="w3-third">
+
+                <div class="w3-white w3-text-grey w3-card-4">
+                    <div class="w3-display-container">
+                        <img src="~/img/logo_light.png" style="width:100%" alt="Avatar">
+                        @*<div class="w3-display-bottomleft w3-container w3-text-black">
+                            <h2>Jane Doe</h2>
+                        </div>*@
+                    </div>
+                    <div class="w3-container">
+                        <p>
+                            <img class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" src="~/img/icons/job_icon1.png"style="height:30px" />
+                            @CustomHelpers.DisplayName(Model.FirstName, Model.LastName)
+                        </p>
+                        <p>
+                            <img class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" src="~/img/icons/department_icon.png" style="height:30px" />
+                            @Html.DisplayFor(model => model.DepartmentName)
+                        </p>
+                        <p>
+                            <img class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" src="~/img/icons/email_icon.png" style="height:30px" />
+                            @Html.DisplayFor(model => model.Email)
+                        </p>
+                        
+                        <hr>
+                    </div>
+                </div><br>
+
+                <!-- End Left Column -->
+            </div>
+
+            <!-- Right Column -->
+            <div class="w3-twothird">
+
+
+
+                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                    <h2>Personal Profile</h2>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#profile">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#personaldata">PersonalInfo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#schedule">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#jobdata">JobInfo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#events">Events</a>
+                        </li>
+
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active show" id="profile">
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                        </div>
+                        <div class="tab-pane fade show" id="personaldata">
+                            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+                        </div>
+                        <div class="tab-pane fade show" id="schedule">
+                            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+                        </div>
+                        <div class="tab-pane fade show" id="jobdata">
+                            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+                        </div>
+                        <div class="tab-pane fade show" id="skills">
+                            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+                        </div>
+                        <div class="tab-pane fade show" id="events">
+                            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+                
+
+                <!-- End Right Column -->
+            </div>
+
+            <!-- End Grid -->
+        </div>
+
+        <!-- End Page Container -->
+    </div>
+
+</body>
+
+
+
+
+
+
+
+<div class="bs-docs-section" style="margin-top: 3em">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-12" style="padding-left: 0px">
+                <h1 id="employees">Employee profile</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card bg-light mb-3" style="max-width: 20rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+            <h4 class="card-title">Light card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+    </div>
+</div>
+
+
 
 <div>
     <h4>Employee</h4>
@@ -47,33 +178,33 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.DateOfEmployment.ToString("dd/MM/yyyy"))
+            @CustomHelpers.DisplayDate(Model.DateOfEmployment)
         </dd>
 
         @*<dt>
-            @Html.DisplayNameFor(model => model.Shift.ShiftName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Shift.ShiftName)
-        </dd>
-        
-        <dt>
-            @Html.DisplayNameFor(model => model.PersonalDataId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PersonalDataId)
-        </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.EventId)
+                @Html.DisplayNameFor(model => model.Shift.ShiftName)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.EventId)
-            </dd>*@
-    
+                @Html.DisplayFor(model => model.Shift.ShiftName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PersonalDataId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PersonalDataId)
+            </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EventId)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EventId)
+                </dd>*@
+
     </dl>
 </div>
 <p>

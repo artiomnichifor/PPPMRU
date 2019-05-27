@@ -24,7 +24,8 @@ namespace Mvc_v1
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-sandstone.css",//changed
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/w3.css"));
             bundles.Add(new StyleBundle("~/Style/css").Include(
                       "~/Content/Default.css"));
         }

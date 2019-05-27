@@ -347,6 +347,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Content\w3.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -358,9 +359,15 @@
     <Content Include="img\icon4.png" />
     <Content Include="img\icon5.png" />
     <Content Include="img\icon6.png" />
+    <Content Include="img\icons\department_icon.png" />
+    <Content Include="img\icons\email_icon.png" />
+    <Content Include="img\icons\job_icon1.png" />
+    <Content Include="img\icons\job_icon2.png" />
+    <Content Include="img\icons\telephone_icon.png" />
     <Content Include="img\logo-square.png" />
     <Content Include="img\logo_header_dark.png" />
     <Content Include="img\logo_header_gray.png" />
+    <Content Include="img\logo_light.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
