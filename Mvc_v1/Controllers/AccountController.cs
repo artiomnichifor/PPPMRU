@@ -69,7 +69,7 @@ namespace Mvc_v1.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("Index");
+                        return RedirectToAction("Index", "Home");
                     }
                 }
             }
