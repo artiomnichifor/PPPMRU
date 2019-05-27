@@ -429,6 +429,8 @@
     <Content Include="Scripts\pastdata.js" />
     <Content Include="Scripts\positivenumber.js" />
     <Compile Include="Validations\PastDateAtribute.cs" />
+    <Content Include="Style\Default.css" />
+    <Content Include="Style\StyleSheet1.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
