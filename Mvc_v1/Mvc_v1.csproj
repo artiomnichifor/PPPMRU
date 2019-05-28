@@ -502,6 +502,7 @@
     <Content Include="Views\Error\AccessDenied.cshtml" />
     <Content Include="Views\GridEmployee\Index.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Employee\CertDet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

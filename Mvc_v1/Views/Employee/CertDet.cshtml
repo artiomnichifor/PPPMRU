@@ -1,7 +1,6 @@
-﻿@model Domain.Dto.EmployeeDto
-
+﻿
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "CertDet";
 }
 
 <body class="w3-light-grey">
@@ -17,7 +16,7 @@
                 <div class="w3-white w3-text-grey w3-card-4">
                     <div class="w3-display-container">
 
-                        <img src="~/img/user_profile.png" style="width:100%" alt="Avatar">
+                        <img src="~/img/admin_profile.png" style="width:100%" alt="Avatar">
                         @*<div class="w3-display-bottomleft w3-container w3-text-black">
                             <h2>Jane Doe</h2>
                         </div>*@
@@ -25,7 +24,7 @@
                     <div class="w3-container">
                         <p>
                             <img class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" src="~/img/icons/job_icon1.png" style="height:30px" />
-                            @CustomHelpers.DisplayName(Model.FirstName, Model.LastName)
+                            Andrei Dragos
                         </p>
                         <p>
                             <img class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" src="~/img/icons/job_icon2.png" style="height:30px" />
@@ -33,15 +32,15 @@
                         </p>
                         <p>
                             <img class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" src="~/img/icons/department_icon.png" style="height:30px" />
-                            @Html.DisplayFor(model => model.DepartmentName)
+                            Marketing
                         </p>
                         <p>
                             <img class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" src="~/img/icons/email_icon.png" style="height:30px" />
-                            @Html.DisplayFor(model => model.Email)
+                            dragodrei@mail.com
                         </p>
                         <p>
                             <img class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" src="~/img/icons/telephone_icon.png" style="height:30px" />
-                            (+373)69303030
+                            (+373)69282313
                         </p>
 
                         <hr>
@@ -91,12 +90,12 @@
                         <div class="tab-pane fade show" id="profile">
                             <p>
                                 First name:
-                                @Html.DisplayFor(model => model.FirstName)
+                                Andrei
 
                             </p>
                             <p>
                                 Last name:
-                                @Html.DisplayFor(model => model.LastName)
+                                Dragos
                             </p>
                             <p>
                                 Position:
@@ -104,19 +103,19 @@
                             </p>
                             <p>
                                 Department:
-                                @Html.DisplayFor(model => model.DepartmentName)
+                                Marketing
                             </p>
                             <p>
                                 Date of employment:
-                                @CustomHelpers.DisplayDate(Model.DateOfEmployment)
+                                5/28/2019
                             </p>
                             <p>
                                 Email:
-                                @Html.DisplayFor(model => model.Email)
+                                dragodrei@mail.com
                             </p>
                             <p>
                                 Telephone number:
-                                (+373)69303030
+                                (+373)69282313
                             </p>
                             
                         </div>
@@ -133,6 +132,7 @@
                                 Address:
                                 that street
                             </p>
+
                         </div>
                         <div class="tab-pane fade show" id="schedule">
                             <p>
@@ -165,15 +165,9 @@
                             <p>
                                 Romanian - native speaker
                             </p>
-                            <p>
-                                Russian - native speaker
-                            </p>
-                            <p>
-                                Spanish - proficient user
-                            </p>
                         </div>
                         <div class="tab-pane fade show" id="events">
-                            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+                            Ana's birthday at 17:00 01/06/2019 
                         </div>
                     </div>
 
@@ -222,78 +216,3 @@
 </div>
 
 
-
-<div>
-    <h4>Employee</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.DepartmentName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DepartmentName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DateOfEmployment)
-        </dt>
-
-        <dd>
-            @CustomHelpers.DisplayDate(Model.DateOfEmployment)
-        </dd>
-
-        @*<dt>
-                @Html.DisplayNameFor(model => model.Shift.ShiftName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Shift.ShiftName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.PersonalDataId)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.PersonalDataId)
-            </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.EventId)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.EventId)
-                </dd>*@
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

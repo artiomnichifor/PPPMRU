@@ -47,6 +47,12 @@ namespace Mvc_v1.Controllers
             return View(employeeDto);
         }
 
+        public ActionResult CertDet()
+        {
+
+            return View();
+        }
+
         // GET: Employee/Create
         public ActionResult Create()
         {
