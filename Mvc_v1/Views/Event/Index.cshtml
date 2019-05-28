@@ -4,55 +4,95 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.EventName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EventDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StartTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EndTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Subject)
-        </th>
-        <th></th>
-    </tr>
+<div class="bs-docs-section" style="margin-top: 3em">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-12" style="padding-left: 0px">
+                <h1 id="employees">Events</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 2em">
+        @if (User.IsInRole("admin"))
+        {
+            <p>
+            @*@Html.ActionLink("Create New", "Create", new { }, new { @type = "button", @class = "btn btn - outline - primary" })*@
+            <button type="button" class="btn btn-outline-primary" onclick="location.href='@Url.Action("Create")'">Create New</button>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StartTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EndTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Subject)
-        </td>
-        <td>
-            @Html.ActionLink("Add", "Add", new { id = item.Id })
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-        </td>
-    </tr>
-}
+        </p>
+        }
+        
 
-</table>
+
+        <table class="table">
+            <tr class="table-primary">
+
+                <th>
+                    @Html.DisplayNameFor(model => model.EventName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EventDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StartTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EndTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Subject)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr class="table-light">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EventName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EventDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EndTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Subject)
+                    </td>
+
+                    <td>
+
+
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            @if (User.IsInRole("admin"))
+                            {
+                                @Html.ActionLink("Add", "Add", new { id = item.Id }, new { @class = "btn btn-outline-info" })
+
+                            }
+                            @if (User.IsInRole("user"))
+                            {                            
+                                @Html.ActionLink("Attend", "Add", new { id = item.Id }, new { @class = "btn btn-outline-info" })
+
+
+                            }
+
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-outline-warning" })
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-outline-success" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-outline-danger" })
+                        </div>
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+
+</div>
+

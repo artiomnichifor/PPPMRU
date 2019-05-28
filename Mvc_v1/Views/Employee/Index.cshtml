@@ -15,13 +15,13 @@
     <div class="row" style="margin-top: 2em">
         @if (User.IsInRole("admin"))
         {
-
-        }
-        <p>
+            <p>
             @*@Html.ActionLink("Create New", "Create", new { }, new { @type = "button", @class = "btn btn - outline - primary" })*@
             <button type="button" class="btn btn-outline-primary" onclick="location.href='@Url.Action("Create")'">Create New</button>
 
         </p>
+        }
+        
 
 
         <table class="table">
