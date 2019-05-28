@@ -4,42 +4,70 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="bs-docs-section" style="margin-top: 3em">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-12" style="padding-left: 0px">
+                <h1 id="employees">Departments</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 2em">
+        @if (User.IsInRole("admin"))
+        {
+            <p>
+            @*@Html.ActionLink("Create New", "Create", new { }, new { @type = "button", @class = "btn btn - outline - primary" })*@
+            <button type="button" class="btn btn-outline-primary" onclick="location.href='@Url.Action("Create")'">Create New</button>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DepartmentName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ManagerName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NumberOfEmployees)
-        </th>
-        <th></th>
-    </tr>
+        </p>
+        }
+        
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DepartmentName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ManagerName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumberOfEmployees)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-        </td>
-    </tr>
-}
 
-</table>
+        <table class="table">
+            <tr class="table-primary">
+                <th>
+                @Html.DisplayNameFor(model => model.DepartmentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManagerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfEmployees)
+            </th>
+            <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+            <tr class="table-light">
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartmentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ManagerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfEmployees)
+                </td>
+
+                <td>
+
+
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-outline-warning" })
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-outline-success" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-outline-danger" })
+                    </div>
+
+                </td>
+            </tr>
+            }
+
+        </table>
+    </div>
+
+
+</div>
+
