@@ -34,7 +34,8 @@ namespace Mvc_v1.Controllers
             var employeeDtos = service.GetAllEmployees();
             return View(employeeDtos);
         }
-        [CustomAuthorize(Roles ="user")]
+
+        //[CustomAuthorize(Roles ="user")]
         // GET: Employee/Details/5
         public ActionResult Details(long id)
         {

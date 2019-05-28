@@ -352,6 +352,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\admin_profile.png" />
     <Content Include="img\hr_photo01.png" />
     <Content Include="img\icon1.png" />
     <Content Include="img\icon2.png" />
@@ -368,6 +369,7 @@
     <Content Include="img\logo_header_dark.png" />
     <Content Include="img\logo_header_gray.png" />
     <Content Include="img\logo_light.png" />
+    <Content Include="img\user_profile.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
