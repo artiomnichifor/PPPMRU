@@ -510,6 +510,7 @@
     <Content Include="Views\Employee\AdminDetails.cshtml" />
     <Content Include="Views\Department\MyDepartment.cshtml" />
     <Content Include="Views\Department\Stats.cshtml" />
+    <Content Include="Views\Department\Stats1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -53,6 +53,12 @@ namespace Mvc_v1.Controllers
             return View();
         }
 
+        public ActionResult Stats1()
+        {
+
+            return View();
+        }
+
 
         // GET: Department/Create
         public ActionResult Create()
