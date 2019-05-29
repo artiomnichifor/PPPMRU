@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "My Department";
+}
+
+<br />
+
+
+
+
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="~/img/human-resources.png" alt="logo_square" width="400" height="400">
+        </div>
+        <div class="col-lg-6">
+            <blockquote class="blockquote text-right">
+                <p class="mb-0" style="font-size: 1.312rem">
+                    Improving workplace productivity performance. @*Inspiring business performance.*@
+
+                </p>
+                <p class="mb-0" style="font-size: 1.312rem">
+                    Assisting leadership for innovation.
+                </p>
+                <p class="mb-0" style="font-size: 1.312rem">
+                    Increasing value through people.
+                </p>
+
+                @*<footer class="blockquote-footer">Anne M. Mulcahy, <cite title="Source Title">former CEO of Xerox</cite></footer>*@
+            </blockquote>
+            <p>
+                Human resources are the people who make up the workforce of an organization, business sector, or economy. "Human capital" is sometimes used synonymously with "human resources", although human capital typically refers to a narrower effect (i.e., the knowledge the individuals embody and economic growth). Likewise, other terms sometimes used include manpower, talent, labor, personnel, or simply people.
+
+            </p>
+            <p>
+                A human-resources department (HR department) of an organization performs human resource management, overseeing various aspects of employment, such as compliance with labor law and employment standards, administration of employee benefits, and some aspects of recruitment.
+
+            </p>
+            @*<h1>ASP.NET</h1>
+        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+        </div>
+    </div> 
+</div>
+
+<br />
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="row">
+            <div class="col-md-4">
+
+
+                <div class="card border-primary mb-3" style="max-width: 20rem; text-align:center; display: table-cell">
+                    <div class="card-header">Department manager</div>
+                    <img style="height: 200px; width: 200px" src="~/img/admin_admin_photo.png" />
+                    <div class="card-body">
+                        <h4 class="card-title">Alexandru Bulai</h4>
+                        <p class="card-text">The manager of this department</p>
+                        <p class="card-text">Employee since 10/10/2010</p>
+                        <p class="card-text">alexbulai@mail.com</p>
+                        <p class="card-text">(+373)69444444</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="card border-primary mb-3" style="max-width: 20rem; text-align:center; display: table-cell">
+                    <div class="card-header">HR</div>
+                    <img style="height: 200px; width: 200px" src="~/img/user1_profile.png" />
+                    <div class="card-body">
+                        <h4 class="card-title">Apostol Daria</h4>
+                        <p class="card-text">A humble HR employee</p>
+                        <p class="card-text">Employee since 02/02/2012</p>
+                        <p class="card-text">apostdaria@mail.com</p>
+                        <p class="card-text">(+373)69404040</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4"
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<div class="modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="margin-top: 200px;">
+            <div class="modal-header">
+                <h5 class="modal-title">Log In</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control" type="text"
+                               placeholder="Username" id="usernametxt" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password"
+                               placeholder="PAssword" id="password" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "nav-link btn btn-outline-primary" })
+                @Html.ActionLink("Close", "Index", "Home", routeValues: null, htmlAttributes: new { id = "homeLink", @class = "nav-link btn btn-outline-warning" })
+            </div>
+        </div>
+    </div>
+</div>

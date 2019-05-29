@@ -41,6 +41,13 @@ namespace Mvc_v1.Controllers
             return View(departmentDto);
         }
 
+        public ActionResult MyDepartment()
+        {
+
+            return View();
+        }
+
+
         // GET: Department/Create
         public ActionResult Create()
         {

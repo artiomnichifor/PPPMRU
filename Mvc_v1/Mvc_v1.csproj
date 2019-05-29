@@ -352,9 +352,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\0x0.png" />
     <Content Include="img\admin_admin_photo.png" />
     <Content Include="img\admin_profile.png" />
     <Content Include="img\hr_photo01.png" />
+    <Content Include="img\human-resources.png" />
     <Content Include="img\icon1.png" />
     <Content Include="img\icon2.png" />
     <Content Include="img\icon3.png" />
@@ -370,6 +372,7 @@
     <Content Include="img\logo_header_dark.png" />
     <Content Include="img\logo_header_gray.png" />
     <Content Include="img\logo_light.png" />
+    <Content Include="img\user1_profile.png" />
     <Content Include="img\user_profile.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -505,6 +508,7 @@
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\Employee\CertDet.cshtml" />
     <Content Include="Views\Employee\AdminDetails.cshtml" />
+    <Content Include="Views\Department\MyDepartment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
