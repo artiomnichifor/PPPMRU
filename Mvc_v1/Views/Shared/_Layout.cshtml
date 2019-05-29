@@ -41,7 +41,7 @@
                      }
                     @if (User.IsInRole("admin"))
                      {
-                        <li class="nav-item">@Html.ActionLink("My Profile", "CertDet", "Employee", new object { }, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("My Profile", "AdminDetails", "Employee", new object { }, new { @class = "nav-link" })</li>
                         <li class="nav-item">@Html.ActionLink("Employees", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
                         <li class="nav-item">@Html.ActionLink("Departments", "Index", "Department", new object { }, new { @class = "nav-link" })</li>
                         <li class="nav-item">@Html.ActionLink("Events", "Index", "Event", new object { }, new { @class = "nav-link" })</li>

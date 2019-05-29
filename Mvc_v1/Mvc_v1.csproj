@@ -352,6 +352,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\admin_admin_photo.png" />
     <Content Include="img\admin_profile.png" />
     <Content Include="img\hr_photo01.png" />
     <Content Include="img\icon1.png" />
@@ -503,6 +504,7 @@
     <Content Include="Views\GridEmployee\Index.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\Employee\CertDet.cshtml" />
+    <Content Include="Views\Employee\AdminDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

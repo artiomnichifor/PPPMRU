@@ -53,6 +53,12 @@ namespace Mvc_v1.Controllers
             return View();
         }
 
+        public ActionResult AdminDetails()
+        {
+
+            return View();
+        }
+
         // GET: Employee/Create
         public ActionResult Create()
         {
