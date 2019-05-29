@@ -25,30 +25,32 @@
             <div class="navbar-collapse collapse" id="navbarResponsive" style>
                 <ul class="nav navbar-nav">
                     @if (!User.Identity.IsAuthenticated)
-                    {
-                        <li class="nav-item">@Html.ActionLink("About", "About", "Home", new object { }, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Contact Us", "Contact", "Home", new object { }, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Careers", "Contact", "Home", new object { }, new { @class = "nav-link" })</li>
+    {
+                <li class="nav-item">@Html.ActionLink("About", "About", "Home", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Contact Us", "Contact", "Home", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Careers", "Contact", "Home", new object { }, new { @class = "nav-link" })</li>
 
-                     }
+}
                     @if (User.IsInRole("user"))
-                     {
-                        <li class="nav-item">@Html.ActionLink("My Profile", "CertDet", "Employee", new object { }, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("My Department", "MyDepartment", "Department", new object { }, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Other Employees", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Events", "Index", "Event", new object { }, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Reports", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
-                     }
+    {
+                <li class="nav-item">@Html.ActionLink("My Profile", "CertDet", "Employee", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("My Department", "MyDepartment", "Department", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Other Employees", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Events", "Index", "Event", new object { }, new { @class = "nav-link" })</li>
+                @*<li class="nav-item">@Html.ActionLink("Reports", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>*@
+}
                     @if (User.IsInRole("admin"))
-                     {
-                        <li class="nav-item">@Html.ActionLink("My Profile", "AdminDetails", "Employee", new object { }, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Employees", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Departments", "Index", "Department", new object { }, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Events", "Index", "Event", new object { }, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Shifts", "Index", "Shift", new object { }, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Salaries", "Index", "Salary", new object { }, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Reports", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
-                     }
+    {
+                <li class="nav-item">@Html.ActionLink("My Profile", "AdminDetails", "Employee", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("My Department", "MyDepartment", "Department", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Employees", "Index", "Employee", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Departments", "Index", "Department", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Events", "Index", "Event", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Shifts", "Index", "Shift", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Salaries", "Index", "Salary", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("CV's", "CVs", "Home", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Reports", "Index", "EmployeeGrid", new object { }, new { @class = "nav-link" })</li>
+}
 
                 </ul>
                 @Html.Partial("_LoginPartial")

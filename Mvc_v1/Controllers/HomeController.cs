@@ -33,11 +33,20 @@ namespace Mvc_v1.Controllers
 
             return View();
         }
+
+
         [HttpPost]
         public ActionResult Careers(HttpPostedFileBase file)
         {
             string filename = Path.GetFileName(file.FileName);
             string filepath = Path.Combine(Server.MapPath("~/File_Upload"), filename);
+
+            return View();
+        }
+
+
+        public ActionResult CVs()
+        {
 
             return View();
         }

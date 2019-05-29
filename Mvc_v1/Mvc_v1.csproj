@@ -365,6 +365,8 @@
     <Content Include="img\icon5.png" />
     <Content Include="img\icon6.png" />
     <Content Include="img\icons\department_icon.png" />
+    <Content Include="img\icons\doc_icon.png" />
+    <Content Include="img\icons\doc_logo.png" />
     <Content Include="img\icons\email_icon.png" />
     <Content Include="img\icons\job_icon1.png" />
     <Content Include="img\icons\job_icon2.png" />
@@ -514,6 +516,7 @@
     <Content Include="Views\Department\Stats.cshtml" />
     <Content Include="Views\Department\Stats1.cshtml" />
     <Content Include="Views\Home\Careers.cshtml" />
+    <Content Include="Views\Home\CVs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
