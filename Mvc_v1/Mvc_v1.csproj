@@ -353,6 +353,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="img\0x0.png" />
+    <Content Include="img\accountan_photo.png" />
     <Content Include="img\admin_admin_photo.png" />
     <Content Include="img\admin_profile.png" />
     <Content Include="img\hr_photo01.png" />
@@ -374,6 +375,7 @@
     <Content Include="img\logo_light.png" />
     <Content Include="img\user1_profile.png" />
     <Content Include="img\user_profile.png" />
+    <Content Include="img\webdev_photo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -511,9 +513,11 @@
     <Content Include="Views\Department\MyDepartment.cshtml" />
     <Content Include="Views\Department\Stats.cshtml" />
     <Content Include="Views\Department\Stats1.cshtml" />
+    <Content Include="Views\Home\Careers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Files_Upload\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
